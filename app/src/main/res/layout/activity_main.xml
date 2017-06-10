@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.isoftstone.randomchoose.MainActivity">
+
+    <ScrollView
+        android:id="@+id/sv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <!-- 整体布局，包括增加和减少商品数量的符号以及中间的商品数量 -->
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:orientation="horizontal"
+                    android:paddingLeft="10dp">
+                    <!-- 减少商品数量的布局 -->
+                    <Button
+                        android:id="@+id/subbt"
+                        android:layout_width="50dp"
+                        android:layout_height="35dp"
+                        android:background="#fff"
+                        android:text="-"
+                        android:textColor="#0157D3"></Button>
+                    <!-- 商品数量的布局 -->
+                    <EditText
+                        android:id="@+id/edt"
+                        android:layout_width="40dp"
+                        android:layout_height="wrap_content"
+                        android:background="@null"
+                        android:cursorVisible="false"
+                        android:editable="false"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:text="0"></EditText>
+                    <!-- 增加商品数量的布局 -->
+                    <Button
+                        android:id="@+id/addbt"
+                        android:layout_width="50dp"
+                        android:layout_height="35dp"
+                        android:background="#fff"
+                        android:text="+"
+                        android:textColor="#0157D3"></Button>
+                </LinearLayout>
+                <TextView
+                    android:id="@+id/begain"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:padding="15dp"
+                    android:text="开始"
+                    android:textSize="18sp" />
+            </RelativeLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#000" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="15dp"
+                android:text="USER" />
+            <com.isoftstone.randomchoose.view.MyGridView
+                android:id="@+id/gv"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:numColumns="6"></com.isoftstone.randomchoose.view.MyGridView>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>
