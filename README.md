@@ -5,3 +5,6 @@
 # utils中包含了常用的工具类
 
    ## 包括 :activity ,close,crach,constant,convert,time,file,randrom,regex,string,thread,toast
+   
+# 简书地址
+    http://www.jianshu.com/u/25324af1f2e1
